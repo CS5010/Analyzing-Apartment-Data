@@ -74,3 +74,42 @@ following ways:
 Here, we provide a high-level description of the ways we went above and beyond
 the original project specification. We outline the techniques here and provide
 deeper analysis and insights in the subsequent Results section.
+
+## 5 Results
+We began with a number of interesting queries as follows:
+1. What is the mean price of an apartment?
+2. What percentage of apartments have wood floors?
+3. What is the median number of starbucks nearby?
+4. What is the average sq ft by # number of bedrooms?
+
+Next we built a regression model to predict price for the potential regressors,
+including many categorical variables for amenities.
+We were worried about multicollinearity of quantitative independent variables as
+well as association between qualitative independent variables. The correlation
+matrix (shown below) reveals a high correlation between bedrooms and
+bathrooms. We left both variables in to allow our forward selection model to
+choose the better of the two.
+
+Using the Cramer’s V test to explore categorical variable association, we found
+(shown below) high association between (Dishwasher, Refrigerator) and between
+(cats, dogs). We dropped regressors for Dogs, and Refrigerator.
+
+Next, we built a regression model using forward selection given a radius of 5
+miles from each apartment to determine the number of local Starbuck stores.
+
+The resulting coefficients with radius = 5 miles were as follows:
+
+We were particularly interested in whether or not the number of local Starbucks
+would be a statistically significant predictor. Indeed, forward selection found it to
+be the second strongest factor (behind bathrooms). Each local Starbucks within a
+5 mile radius is associated with a $17.07 increase in monthly rent. We do not
+necessarily think there is a causal relationship here; instead, our hypothesis is
+that Starbucks are cited highly desirable locations. Moreover, there are more
+Starbucks locations in areas with higher population density and it is the
+population that ‘causes’ the increase in demand.
+
+As noted above, the adj $R^2$ with radius=5 miles is 41.8%. By comparison, we
+repeated the forward selection algorithm excluding the starbucksCount variable
+and found adj $R^2$ drops to 28.6%. This strengthened our conviction in using the
+Starbucks count as a predictor.
+
