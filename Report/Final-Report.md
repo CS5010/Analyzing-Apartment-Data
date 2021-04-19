@@ -56,12 +56,8 @@ rent data. Since the data had not been uploaded to the UCI Data
 Repository, we obtained it directly from the individual who sourced it (that
 individual employed web-scraping.)
 2. Examine & clean the data
-a. The primary source data contained 22 attributes and 10,000 rows.
-As discussed above and in the Appendix, we retained the 8 of the
-attributes we felt would be most useful for analysis. We examined
-and addressed missing data and outliers.
-b. The secondary source data continued Starbucks locations with
-latitude and longitude. We obtained this from Data.World.
+   1. The primary source data contained 22 attributes and 10,000 rows. As discussed above and in the Appendix, we retained the 8 of the attributes we felt would be most useful for analysis. We examined and addressed missing data and outliers.
+   2. The secondary source data continued Starbucks locations with latitude and longitude. We obtained this from Data.World.
 3. Read the two CSV files into 2 dataframes in Python
 4. Append a column to the dataframe with the number of Starbucks within an x (ex: 5) mile radius of each apartment.
 5. Query and analyze the data (including Unit Testing of our code) in the
