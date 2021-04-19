@@ -170,6 +170,17 @@ The converge was rapid as shown below:
 
 ![Figure 5-14](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/5-14.jpg)
 
+Our binary search algorithm found the optimal radius to be 81 miles with an adj
+R 2 = 49.57%. This radius was much further than we expected - our hypothesis
+was that the radius should be within walking distance if the relationship were
+more causal. This further confirms our suspicion that the Starbucks count is a
+proxy for other factors, especially population density.
+
+The resulting apartment pricing model coefficients with a optimized radius of 81
+miles is as follows:
+
+![Figure 5-15](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/5-15.jpg)
+
 ## Conclusions
 1. Key Findings and Use Cases
    1. Given an adj R 2 = 49.57% (moderately high), we would recommend our model as directionally correct for landlords and tenants to use when signing & renewing leases.
