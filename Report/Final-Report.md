@@ -44,3 +44,7 @@ One of the attributes we did not use but still wanted to investigate was the sou
 
 In addition, we supplemented the primary apartment for rent dataset with an additional dataset 2 listing all Starbucks locations in the world in order to explore whether nearby coffee shops might be statistically significant in predicting apartment pricing. 
 This data includes latitude and longitude which helped us in determining how many Starbucks lie within an x (ex: 5) mile radius of each apartment.
+
+## 3.Experimental Design
+The following is our step-by-step process from obtaining the data to finding
+results.
