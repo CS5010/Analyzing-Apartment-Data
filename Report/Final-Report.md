@@ -3,7 +3,7 @@
 - David Ackerman (dja2dg)
 - Jeremey Donovan (jdd5dw)
 - Xin Huang (xh2jg)
-
+---
 ## 1 Introduction
 We set out to understand how apartments are priced in the United States. 
 This has both applications for both tenants and landlords. 
