@@ -30,3 +30,17 @@ The attributes we used from the apartments for rent dataset were as follows (wit
   - 205 missing values (of which 7 are blank and 198 coded as “0” which is not possible). We dropped all 205 values.
 - Pets_Allowed
   - Listed as none, cats, or ‘cats,dogs’. There are also 1748 coded as ‘null’ which we retained by assuming ‘none’.
+- Price
+  - Ranges from $200 to $52,500 with a mean of $1486; No missing values
+  - The $52,500/month apartment, an outlier, was miscoded since the description lists price as $500/month. We dropped this (actually was dropped because it also had bedrooms = 0)
+- Square_feet
+  - Ranges from 101 to 40,000 with an average of 946; no missing values
+- Latitude & Longitude
+  - 10 missing values; we replaced the missing values with sentinel values for the North Pole
+We also eliminated four records that appeared to be rooms for rent (discussed in
+Appendix A).
+
+One of the attributes we did not use but still wanted to investigate was the source from which the creator of the data scraped. As shown in the figure below, the vast majority were from RentLingo (69%) and RentDigs.com (28%).
+
+In addition, we supplemented the primary apartment for rent dataset with an additional dataset 2 listing all Starbucks locations in the world in order to explore whether nearby coffee shops might be statistically significant in predicting apartment pricing. 
+This data includes latitude and longitude which helped us in determining how many Starbucks lie within an x (ex: 5) mile radius of each apartment.
