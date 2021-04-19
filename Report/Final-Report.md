@@ -102,8 +102,20 @@ We began with a number of interesting queries as follows:
 ![Figure 5-2](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/5-2.jpg)
 
 2. What percentage of apartments have wood floors?
+
+![Figure 5-3](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/5-3.jpg)
+![Figure 5-4](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/5-4.jpg)
+
 3. What is the median number of starbucks nearby?
+
+![Figure 5-5](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/5-5.jpg)
+![Figure 5-6](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/5-6.jpg)
+
 4. What is the average sq ft by # number of bedrooms?
+
+![Figure 5-7](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/5-7.jpg)
+![Figure 5-8](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/5-8.jpg)
+![Figure 5-9](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/5-9.jpg)
 
 Next we built a regression model to predict price for the potential regressors,
 including many categorical variables for amenities.
@@ -113,14 +125,22 @@ matrix (shown below) reveals a high correlation between bedrooms and
 bathrooms. We left both variables in to allow our forward selection model to
 choose the better of the two.
 
+![Figure 5-10](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/5-10.jpg)
+
 Using the Cramer’s V test to explore categorical variable association, we found
 (shown below) high association between (Dishwasher, Refrigerator) and between
 (cats, dogs). We dropped regressors for Dogs, and Refrigerator.
 
+![Figure 5-11](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/5-11.jpg)
+
 Next, we built a regression model using forward selection given a radius of 5
 miles from each apartment to determine the number of local Starbuck stores.
 
+![Figure 5-12](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/5-12.jpg)
+
 The resulting coefficients with radius = 5 miles were as follows:
+
+![Figure 5-13](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/5-13.jpg)
 
 We were particularly interested in whether or not the number of local Starbucks
 would be a statistically significant predictor. Indeed, forward selection found it to
@@ -135,6 +155,20 @@ As noted above, the adj $R^2$ with radius=5 miles is 41.8%. By comparison, we
 repeated the forward selection algorithm excluding the starbucksCount variable
 and found adj $R^2$ drops to 28.6%. This strengthened our conviction in using the
 Starbucks count as a predictor.
+
+In order to optimize the apartment pricing formula, we created a binary search
+algorithm to find radius that maximizes adj R 2 . We expect adj R 2 to be an inverse
+parabola as a function of radius; when radius=0, we know adj R 2 = 28.6%; we ran
+with a radius of 1000 miles and found an adj R 2 = 30.1%. With a large radius, the
+number of Starbucks should be irrelevant. (Note: This approach would not be
+appropriate if adj R 2 as a function of radius was expected to have multiple local
+maxima rather than one global maximum).
+
+Scanning integer radii between 1 and 1000 miles, our binary search algorithm
+found the maximum in 10 iterations, matching our expectation of log2(1000)=10.
+The converge was rapid as shown below:
+
+![Figure 5-14](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/5-14.jpg)
 
 ## Conclusions
 1. Key Findings and Use Cases
