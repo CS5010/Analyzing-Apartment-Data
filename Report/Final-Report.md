@@ -17,7 +17,7 @@ Beyond pricing, we also sought to understand how amenities vary in the ‘averag
 Avoiding the need for web scraping, we were able to locate a recent (2019-12-28) apartment for rent dataset 1 containing 10,000 rows on the UCI Machine Learning Repository. 
 Since the creator had not uploaded the data, we reached out to him ( fredrick_nilsson@yahoo.com ) directly and he kindly sent us his datafile. 
 This data sets sampled apartment listings across 51 states.
-
+![Figure 1](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/fig1.jpg)
 The attributes we used from the apartments for rent dataset were as follows (with a discussion of how we cleaned the data to address outliers and missing data):
 
 - Amenities
