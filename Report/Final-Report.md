@@ -4,7 +4,7 @@
 - Jeremey Donovan (jdd5dw)
 - Xin Huang (xh2jg)
 
-## Introduction
+## 1 Introduction
 We set out to understand how apartments are priced in the United States. 
 This has both applications for both tenants and landlords. 
 Tenants would benefit from unbiased pricing information when signing or renewing lease agreements.
@@ -13,7 +13,7 @@ Moreover, landlords could determine which amenities would have the highest retur
 
 Beyond pricing, we also sought to understand how amenities vary in the ‘average’ apartment across cities. This is designed to help people moving to new cities decide where they are most likely to get the housing they desire.
 
-## The Data
+## 2 The Data
 Avoiding the need for web scraping, we were able to locate a recent (2019-12-28) apartment for rent dataset 1 containing 10,000 rows on the UCI Machine Learning Repository. 
 Since the creator had not uploaded the data, we reached out to him ( fredrick_nilsson@yahoo.com ) directly and he kindly sent us his datafile. 
 This data sets sampled apartment listings across 51 states.
@@ -45,6 +45,15 @@ One of the attributes we did not use but still wanted to investigate was the sou
 In addition, we supplemented the primary apartment for rent dataset with an additional dataset 2 listing all Starbucks locations in the world in order to explore whether nearby coffee shops might be statistically significant in predicting apartment pricing. 
 This data includes latitude and longitude which helped us in determining how many Starbucks lie within an x (ex: 5) mile radius of each apartment.
 
-## 3.Experimental Design
+## 3 Experimental Design
 The following is our step-by-step process from obtaining the data to finding
 results.
+1. Obtain data
+We browsed several sources including the UCI Data Repository, Kaggle,
+and Data.World to find a dataset that would allow us to apply a range of
+data science techniques. As discussed above, we settled on apartment
+rent data. Since the data had not been uploaded to the UCI Data
+Repository, we obtained it directly from the individual who sourced it (that
+individual employed web-scraping.)
+2. Examine & clean the data
+3. 
