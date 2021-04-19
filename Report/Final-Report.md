@@ -66,16 +66,19 @@ latitude and longitude. We obtained this from Data.World.
 4. Append a column to the dataframe with the number of Starbucks within an x (ex: 5) mile radius of each apartment.
 5. Query and analyze the data (including Unit Testing of our code) in the
 following ways:
+
   a. Regression analysis with price as the dependent variable
+  
   b. Visualize and descriptive statistics
-  c. Prediction models for determining which city a listing is in based on
-price, bedrooms, bathrooms, and square feet
-d. Prediction models for the number of bedrooms based on price and
-bathrooms
-e. Determine general relationship between the number of bedrooms
-and number of bathrooms in apartments
-f. General bar and scatter plots to understand relationship between
-variables using df display GUI
+  
+  c. Prediction models for determining which city a listing is in based on price, bedrooms, bathrooms, and square feet
+  
+d. Prediction models for the number of bedrooms based on price and bathrooms
+
+e. Determine general relationship between the number of bedrooms and number of bathrooms in apartments
+
+f. General bar and scatter plots to understand relationship between variables using df display GUI
+
 6. Write up our results with tables & visualizations
 
 ## 4 Beyond the Original Specification
