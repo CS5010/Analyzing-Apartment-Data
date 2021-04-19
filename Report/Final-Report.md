@@ -113,3 +113,15 @@ repeated the forward selection algorithm excluding the starbucksCount variable
 and found adj $R^2$ drops to 28.6%. This strengthened our conviction in using the
 Starbucks count as a predictor.
 
+## Conclusions
+1. Key Findings and Use Cases
+   1. Given an adj R 2 = 49.57% (moderately high), we would recommend our model as directionally correct for landlords and tenants to use when signing & renewing leases.
+   2. In the presence of other factors (to confirm we would recommend simple linear regression), the following are positively correlated with pricing and are therefore recommended improvements for landlords to make: bathrooms; citing near Starbucks; larger sq. ft; elevator; bedrooms; wood floor; view; dishwasher; internet access. Notably, most of these are ‘interior to the apartment’ improvements.
+   3. In the presence of other factors (to confirm we would recommend simple linear regression), the following are negatively correlated with pricing and therefore not recommended: playground; fireplace; AC (investigate further); doorman (investigate further); garbage disposal; basketball; washer/dryer (investigate further); gated (investigate further). Most of these are external and/or generate noise (garbage disposal) or risk (fireplace). We suspect those we labeled as “investigate further” would turn positive in simple linear regression and are thus conflated with other factors in the multiple regression.
+2. Future Improvements (if we had more time)
+   1. Integrate additional predictors into our regression model Including but not limited to 4 : population density; city ranking; median household income; racial composition; crime rates; etc.
+   2. More carefully explore non-linearity and/or interactions between independent variables in our regression model
+   3. Test the validity of our pricing model with out-of-sample data
+   4. Implement a vectorized version of the geodesic algorithm (more accurate than Haversine)
+   5. Explore more sophisticated regression models beyond forward selection to predict price
+   6. Implement natural language processing to extract keywords from the “body” attribute (a free form text description of each apartment)
