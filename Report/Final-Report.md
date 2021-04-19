@@ -73,11 +73,11 @@ following ways:
   
   c. Prediction models for determining which city a listing is in based on price, bedrooms, bathrooms, and square feet
   
-d. Prediction models for the number of bedrooms based on price and bathrooms
+  d. Prediction models for the number of bedrooms based on price and bathrooms
 
-e. Determine general relationship between the number of bedrooms and number of bathrooms in apartments
+  e. Determine general relationship between the number of bedrooms and number of bathrooms in apartments
 
-f. General bar and scatter plots to understand relationship between variables using df display GUI
+  f. General bar and scatter plots to understand relationship between variables using df display GUI
 
 6. Write up our results with tables & visualizations
 
