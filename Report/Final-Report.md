@@ -77,3 +77,8 @@ and number of bathrooms in apartments
 f. General bar and scatter plots to understand relationship between
 variables using df display GUI
 6. Write up our results with tables & visualizations
+
+## 4 Beyond the Original Specification
+Here, we provide a high-level description of the ways we went above and beyond
+the original project specification. We outline the techniques here and provide
+deeper analysis and insights in the subsequent Results section.
