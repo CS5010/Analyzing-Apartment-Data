@@ -97,6 +97,10 @@ deeper analysis and insights in the subsequent Results section.
 ## 5 Results
 We began with a number of interesting queries as follows:
 1. What is the mean price of an apartment?
+
+![Figure 5-1](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/fig5-1.jpg)
+![Figure 5-2](https://github.com/JudFox/Analyzing-Apartment-Data/blob/main/Report/figures/fig5-2.jpg)
+
 2. What percentage of apartments have wood floors?
 3. What is the median number of starbucks nearby?
 4. What is the average sq ft by # number of bedrooms?
